@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        //Kordy\Ticketit\TicketitServiceProvider::class,
+        Kordy\Ticketit\TicketitServiceProvider::class,
 
         /*
          * Application Service Providers...
