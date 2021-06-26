@@ -73,12 +73,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">خانه</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">ورود</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">ثبتنام</a>
                         @endif
                     @endauth
                 </div>
@@ -87,32 +87,14 @@
             <div class="content">
                 <div class="title m-b-md">
                     {{ config('app.name') }}
-                    {{-- This is not nice --}}
-                    {{-- However probably the first you'll do after install, --}}
-                    {{-- is to delete this file, so who cares? --}}
-                    <?php
-                        $packages = collect(json_decode(file_get_contents(base_path('composer.lock')))->packages);
-                    ?>
-                    <span class="version">
-                        {{
-                            substr($packages->where('name', 'kordy/ticketit')->first()->version, 1)
-                        }}
-                    </span>
+                  
+                     
+                     
                 </div>
-                <div class="subtitle m-b-md">
-                    Powered by Laravel
-                    {{
-                        substr($packages->where('name', 'laravel/framework')->first()->version, 1)
-                    }}
-                </div>
+                 
 
 
-                <div class="links">
-                    <a href="https://github.com/thekordy/ticketit/wiki">Documentation</a>
-                    <a href="https://github.com/thekordy/ticketit/issues">Bug reports</a>
-                    <a href="https://github.com/thekordy/ticketit/">GitHub</a>
-                    <a href="https://laravel.com/">Laravel</a>
-                </div>
+                 
             </div>
         </div>
     </body>
